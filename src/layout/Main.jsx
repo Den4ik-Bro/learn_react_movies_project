@@ -21,7 +21,7 @@ export default class Main extends React.Component {
   handleSearch = (str, type='all') => {
     this.setState({isLoading: true})
     fetch(
-      `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${str}${type !== 'all' ? `&type=${type}` : ''}`
+      `https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${str}${type !== 'all' ? `&type=${type}` : ''}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -34,7 +34,7 @@ export default class Main extends React.Component {
 
   componentDidMount() {
     fetch(
-      `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${this.state.defaultValue}`
+      `https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${this.state.defaultValue}`
     )
       .then((res) => res.json())
       .then((data) => {
