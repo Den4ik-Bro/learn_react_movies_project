@@ -10,7 +10,7 @@ class Search extends React.Component {
   }
 
   handleKey = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && this.state.search) {
       this.props.handleSearch(this.state.search, this.state.type);
     }
   };
