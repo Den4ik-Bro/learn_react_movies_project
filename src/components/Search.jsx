@@ -17,7 +17,7 @@ export const Search = (props) => {
 
   const handleChange = (event) => {
     setType(event.target.value);
-    handleSearch(search, type);
+    handleSearch(search, event.target.value);
   };
 
   return (
